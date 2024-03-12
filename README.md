@@ -7,7 +7,7 @@
 
 **CC-SOS-SDP** is an exact algorithm based on the branch-and-cut technique for solving the Minimum Sum-of-Squares Clustering (MSSC) problem with cardinality constraints described in the paper ["Global Optimization for Cardinality-constrained Minimum Sum-of-Square Clustering via Semidefinite Programming"](https://doi.org/10.1007/s10107-023-02021-8). This repository contains the C++ source code, the MATLAB scripts, and the datasets used for the experiments.
 
-> Piccialli, V., Sudoso, A.M. Global optimization for cardinality-constrained minimum sum-of-squares clustering via semidefinite programming. Math. Program. (2023). https://doi.org/10.1007/s10107-023-02021-8
+> Piccialli, V., Sudoso, A. M. Global optimization for cardinality-constrained minimum sum-of-squares clustering via semidefinite programming. **Mathematical Programming** (2023), https://doi.org/10.1007/s10107-023-02021-8.
 
 ## Installation
 **CC-SOS-SDP** calls the semidefinite programming solver [SDPNAL+](https://blog.nus.edu.sg/mattohkc/softwares/sdpnalplus/) by using the [MATLAB Engine API](https://www.mathworks.com/help/matlab/calling-matlab-engine-from-cpp-programs.html) for C++. It requires the MATLAB engine library *libMatlabEngine* and the Matlab Data Array library *libMatlabDataArray*. **CC-SOS-SDP** calls the integer programming solver [Gurobi](https://www.gurobi.com/). **CC-SOS-SDP** uses [Armadillo](http://arma.sourceforge.net/) to handle matrices and linear algebra operations efficiently. Before installing Armadillo, first install OpenBLAS and LAPACK along with the corresponding development files. **CC-SOS-SDP** implements a configurable thread pool of POSIX threads to speed up the branch-and-bound search.
@@ -158,3 +158,13 @@ GAP: 0
 OPT: 81.2778
 
 ```
+
+## Related Works
+
+> V. Piccialli, A. M. Sudoso, A. Wiegele, SOS-SDP: an Exact Solver for Minimum Sum-of-Squares Clustering, **INFORMS Journal on Computing** (2022).
+- Paper: https://doi.org/10.1287/ijoc.2022.1166
+- Code: https://github.com/antoniosudoso/sos-sdp
+
+> V. Piccialli, A. Russo Russo, A. M. Sudoso, An Exact Algorithm for Semi-supervised Minimum Sum-of-Squares Clustering. **Computers & Operations Research** (2022).
+- Paper: https://doi.org/10.1016/j.cor.2022.105958
+- Code: https://github.com/antoniosudoso/pc-sos-sdp
